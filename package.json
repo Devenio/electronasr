@@ -13,7 +13,10 @@
     "@nuxtjs/axios": "^5.12.5",
     "core-js": "^3.8.3",
     "nuxt": "^2.15.7",
-    "postcss": "^8.3.4"
+    "postcss": "^8.3.4",
+    "swiper": "^6.7.0",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.3",

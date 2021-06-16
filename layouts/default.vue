@@ -1,7 +1,8 @@
 <template>
   <div>
     <app-header />
-    <Nuxt />  
+    <Nuxt />
+    <app-footer />  
   </div>  
 </template>
 

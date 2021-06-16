@@ -1,7 +1,11 @@
 <template>
   <div dir="rtl">
     <header class="header-background relative">
-      <img src="/img/group1.svg" alt="" class="absolute lg:w-auto w-[100px] -bottom-1 right-0">
+      <img
+        src="/img/group1.svg"
+        alt=""
+        class="absolute lg:w-auto w-[100px] -bottom-1 right-0"
+      />
       <section class="flex items-center justify-center h-[500px]">
         <div class="text-center">
           <h2 class="text-3xl font-bold text-white md:text-5xl">
@@ -31,14 +35,87 @@
     <section class="mt-10">
       <div class="container mx-auto px-3 lg:p-0">
         <h3 class="text-right lg:text-xl">جدیدترین محصولات</h3>
-        <div class="mt-3 h-[2px] w-[100px] bg-main"></div>
+        <div class="mt-3 mb-5 h-[2px] w-[100px] bg-main"></div>
+        <swiper class="swiper mt-5" :options="swiperOption" dir="rtl">
+          <product />
+          <product />
+          <product />
+          <product />
+          <product />
+          <product />
+        </swiper>
+        <h3 class="text-right mt-10 lg:text-xl">پرفروش ترین محصولات</h3>
+        <div class="mt-3 mb-5 h-[2px] w-[100px] bg-main"></div>
+        <swiper class="swiper mt-5" :options="swiperOption" dir="rtl">
+          <product />
+          <product />
+          <product />
+          <product />
+          <product />
+          <product />
+        </swiper>
+        <h3 class="text-right mt-10 lg:text-xl">لیست محصولات</h3>
+        <div class="mt-3 mb-5 h-[2px] w-[100px] bg-main"></div>
+        <swiper class="swiper mt-5" :options="swiperOption" dir="rtl">
+          <swiper-slide
+            class="py-2 mx-3 rounded-lg text-center px-5 shadow-xl border-black border-2  border-opacity-10"
+          >
+            لوازم خانگی
+          </swiper-slide>
+          <swiper-slide
+            class="py-2 mx-3 rounded-lg text-center px-5 shadow-xl border-black border-2  border-opacity-10"
+          >
+            لوازم برقی
+          </swiper-slide>
+          <swiper-slide
+            class="py-2 mx-3 rounded-lg text-center px-5 shadow-xl border-black border-2  border-opacity-10"
+          >
+            ابزارآلات صنعتی
+          </swiper-slide>
+          <swiper-slide
+            class="py-2 mx-3 rounded-lg text-center px-5 shadow-xl border-black border-2  border-opacity-10"
+          >
+            ابزار برقی منزل
+          </swiper-slide>
+        </swiper>
       </div>
     </section>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  components: {
+    // VueSlickCarousel
+  },
+  data() {
+    return {
+      swiperOption: {
+        slidesPerView: 5.5,
+        spaceBetween: 30,
+
+        breakpoints: {
+          1280: {
+            slidesPerView: 5.5,
+            spaceBetween: 40
+          },
+          1024: {
+            slidesPerView: 3.5,
+            spaceBetween: 40
+          },
+          640: {
+            slidesPerView: 2.5,
+            spaceBetween: 20
+          },
+          320: {
+            slidesPerView: 1.5,
+            spaceBetween: 10
+          }
+        }
+      }
+    };
+  }
+};
 </script>
 
 <style scoped>
