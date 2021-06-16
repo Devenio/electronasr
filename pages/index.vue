@@ -85,9 +85,7 @@
 
 <script>
 export default {
-  components: {
-    // VueSlickCarousel
-  },
+  components: {},
   data() {
     return {
       swiperOption: {

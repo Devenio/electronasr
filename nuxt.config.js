@@ -52,5 +52,7 @@ export default {
       solid: true
     },
     component: "fa"
-  }
+  },
+
+  loading: '~/components/LoadingBar.vue'
 };
