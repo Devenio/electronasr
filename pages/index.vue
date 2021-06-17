@@ -80,7 +80,7 @@
         </swiper>
       </div>
     </section>
-    <div class="container mx-auto mt-10">
+    <div class="container mx-auto mt-10 px-5">
       <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.468062899862!2d51.4203368151603!3d35.690097787093336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e018fb2a5417d%3A0xfcdcb284be05b19e!2z2b7Yp9iz2KfamCDYqNmH2KfYsQ!5e0!3m2!1sen!2snl!4v1623939174079!5m2!1sen!2snl"
       style="border:0;"
