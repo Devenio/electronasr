@@ -1,8 +1,23 @@
 @font-face {
-    font-family: IRANSansWeb;
-    src: url('./fonts/IRANSansWeb.ttf');
+  font-family: IRANSansWeb;
+  src: url("./fonts/IRANSansWeb.ttf");
 }
 * {
-    outline: none;
-    font-family: IRANSansWeb;
+  outline: none;
+  font-family: IRANSansWeb;
 }
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+.page-enter {
+  transform: translateX(50px);
+}
+.page-leave-to {
+  transform: translateX(-50px);
+}
+

@@ -9,7 +9,7 @@
     />
     <h3 class="text-lg mt-3 font-bold text-center">لامپ 100 وات</h3>
     <h6 class="text-md mt-2 text-center">100 هزار تومن</h6>
-    <div class="text-sm mt-3 text-center">برای سفارش خرید تماس بگیرید</div>
+    <a href="tel:09127141877" class="text-sm mt-3 text-center hover:underline">برای سفارش خرید تماس بگیرید</a>
   </swiper-slide>
 </template>
 

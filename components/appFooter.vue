@@ -11,7 +11,7 @@
       <span
         class="text-sm lg:text-base w-[1px] h-[50px] bg-black opacity-25"
       ></span>
-      <span class="text-sm lg:text-base ">درباره ما</span>
+      <nuxt-link to="/about" class="text-sm lg:text-base ">درباره ما</nuxt-link>
     </div>
     <div class="relative w-full flex items-center justify-center flex-col py-5">
       <img src="/img/logo.png" class="w-[60px]" alt="" />
@@ -24,7 +24,7 @@
         <fa class="text-xl text-gray-800" :icon="['fab', 'telegram-plane']" />
         <fa class="text-xl text-gray-800" :icon="['fab', 'whatsapp']" />
       </div>
-      <h3 class="mt-3 lg:text-lg font-bold">تلفن تماس: 09015633258</h3>
+      <a href="tel:09127141877" class="mt-3 lg:text-lg font-bold">تلفن تماس: 09127141877</a>
       <svg
         width="184"
         height="342"
