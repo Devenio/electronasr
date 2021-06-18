@@ -1,15 +1,17 @@
 <template>
   <div class="w-full p-5 relative">
     <div class="relative z-10">
-      <img src="/img/group2.svg" class="mx-auto lg:mt-10" alt="" />
-      <h1 class="font-bold text-lg sm:text-4xl mt-5 lg:mt-8 text-center">
-        درباره فروشگاه محصولات برق و الکتریکی
-        <strong class="text-main">الکترونصر</strong>
-      </h1>
+      <transition name="slide-in" apear>
+        <img src="/img/group2.svg" class="mx-auto lg:mt-10" alt="" />
+      </transition>
+        <h1 class="font-bold text-lg sm:text-4xl mt-5 lg:mt-8 text-center">
+          درباره فروشگاه محصولات برق و الکتریکی
+          <strong class="text-main">الکترونصر</strong>
+        </h1>
     </div>
     <div class="container mx-auto relative z-10">
       <p class="sm:text-lg leading-snug mt-5 text-center sm:px-16" dir="rtl">
-        فروشگاه الکترونصر فعالیت خود را از سال 1366 آغاز نموده و همگام با ارتقائ
+        فروشگاه الکترونصر فعالیت خود را از سال 1366 آغاز نموده و همگام با ارتقاء
         و پیشرفت صنعت کشور در سال 1380 با تولیدات و واردات کلیه تجهیزات برق
         صنعتی در این خصوص در خدمت شرکت ها و ادارات و ... می باشد. ما توانسته ایم
         بخش زیادی از بازار برق و الکترونیک را برای مصرف کنندگان و مخاطبان در این
@@ -65,9 +67,13 @@
           <h1 class="text-xl font-bold mt-5">عباس توفیقی</h1>
 
           <div class="mt-3 flex items-center">
-            <fa :icon="['fas', 'exclamation']" class="text-xl ml-2 text-red-700" />
+            <fa
+              :icon="['fas', 'exclamation']"
+              class="text-xl ml-2 text-red-700"
+            />
             <h1 class="inline-block sm:text-lg text-center sm:text-right mt-3">
-              .برای سفارش محصولات میتوانید با یکی از شماره تلفن های بالا تماس بگیرید
+              .برای سفارش محصولات میتوانید با یکی از شماره تلفن های بالا تماس
+              بگیرید
             </h1>
           </div>
           <nuxt-link

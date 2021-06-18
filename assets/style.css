@@ -8,7 +8,7 @@
 }
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 .page-enter,
 .page-leave-to {
@@ -19,5 +19,14 @@
 }
 .page-leave-to {
   transform: translateX(-50px);
+}
+
+
+.slide-in-enter {
+  opacity: 0;
+  transform: translateX(50px);
+}
+.slide-in-enter-active {
+  transition: all 500ms ease;
 }
 
