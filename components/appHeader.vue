@@ -41,10 +41,10 @@
         />
       </div>
 
-      <nuxt-link
-        to="/blog"
+      <a
+        href="http://45.147.77.128/Blog/"
         class="link text-sm font-medium text-center py-3 px-5 rounded-lg transition-colors duration-300 transform hover:text-main"
-        >بلاگ</nuxt-link
+        >بلاگ</a
       >
       <div
         class="category relative text-sm cursor-pointer font-medium text-center py-3 px-5 rounded-lg transition-colors duration-300 transform"
