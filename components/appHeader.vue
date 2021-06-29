@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="container px-6 py-4 mx-auto top-0 lg:flex lg:justify-between lg:items-center"
+    class="container relative z-20 px-6 py-4 mx-auto top-0 lg:flex lg:justify-between lg:items-center"
   >
     <div class="flex items-center justify-between">
       <img src="/img/logo.png" alt="" class="lg:w-[60px] w-[40px]" />
@@ -30,7 +30,10 @@
       <div
         class="relative flex items-center lg:mr-5 justify-between border-2 border-gray-400 rounded-lg overflow-hidden"
       >
-        <fa :icon="['fas', 'search']" class="text-xl text-gray-700 ml-3 cursor-pointer" />
+        <fa
+          :icon="['fas', 'search']"
+          class="text-xl text-gray-700 ml-3 cursor-pointer"
+        />
         <input
           type="text"
           class="py-2 lg:w-[300px] px-3 placeholder-gray-700 text-sm  text-right"
@@ -40,22 +43,37 @@
 
       <nuxt-link
         to="/blog"
-        class="text-sm font-medium text-center py-3 px-5 rounded-lg transition-colors duration-300 transform hover:text-main"
+        class="link text-sm font-medium text-center py-3 px-5 rounded-lg transition-colors duration-300 transform hover:text-main"
         >بلاگ</nuxt-link
       >
-      <nuxt-link
-        to="/products"
-        class="text-sm font-medium text-center py-3 px-5 rounded-lg transition-colors duration-300 transform hover:text-main"
-        >محصولات</nuxt-link
+      <div
+        class="category relative text-sm cursor-pointer font-medium text-center py-3 px-5 rounded-lg transition-colors duration-300 transform"
       >
+        <fa :icon="['fas', openMegaMenu ? 'angle-up' : 'angle-down']" />
+        محصولات
+        <div
+          class="px-5 py-3 mt-3 lg:mt-0 rounded-lg flex divide-y-2 divide-gray-200 bg-white border-2 min-w-[200px] border-gray-200 shadow-xl lg:absolute top-16 right-0 z-50 flex-col items-center"
+          v-show="openMegaMenu"
+          id="category-box"
+        >
+          <nuxt-link
+            class="no-wrap py-3 w-full hover:bg-green-300 rounded-lg"
+            :to="{ path: '/products', query: { id: category.id, name: category.categoryName } }"
+            v-for="category in list_category"
+            :key="category.id"
+          >
+            {{ category.categoryName }}
+          </nuxt-link>
+        </div>
+      </div>
       <nuxt-link
         to="/about"
-        class="text-sm font-medium text-center py-3 px-5 rounded-lg transition-colors duration-300 transform hover:text-main"
+        class="link text-sm font-medium text-center py-3 px-5 rounded-lg transition-colors duration-300 transform hover:text-main"
         >درباره ما</nuxt-link
       >
       <nuxt-link
         to="/"
-        class="text-sm font-medium text-center py-3 px-5 rounded-lg transition-colors duration-300 transform hover:text-main"
+        class="link text-sm font-medium text-center py-3 px-5 rounded-lg transition-colors duration-300 transform hover:text-main"
         >صفحه اصلی</nuxt-link
       >
     </div>
@@ -63,17 +81,31 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   data() {
     return {
-      isOpen: false
+      isOpen: false,
+      openMegaMenu: false
     };
-  }
+  },
+  mounted() {
+    const category = document.querySelector(".category");
+    const categoryBox = document.querySelector("#category-box");
+
+    category.addEventListener("click", () => {
+      this.$nuxt.refresh();
+      this.openMegaMenu === true
+        ? (this.openMegaMenu = false)
+        : (this.openMegaMenu = true);
+    });
+  },
+  computed: mapState(["list_category"])
 };
 </script>
 
 <style scoped>
-.nuxt-link-exact-active {
+.nuxt-link-exact-active.link {
   @apply bg-main text-white;
 }
 </style>

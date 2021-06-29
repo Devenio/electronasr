@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <vue-particles
-    v-if="$route.path === '/about'"
+      v-if="$route.path === '/about'"
       color="#999999"
       :particleOpacity="0.7"
       :particlesNumber="30"

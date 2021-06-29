@@ -3,11 +3,11 @@
     <div
       class="w-full py-5 space-x-3 lg:space-x-5 flex items-center justify-center border-t-2 border-b-2 border-black border-opacity-10"
     >
-      <span class="text-sm lg:text-base ">ارتباط با ما</span>
+      <nuxt-link to="/blog" class="text-sm lg:text-base ">بلاگ</nuxt-link>
       <span
         class="text-sm lg:text-base w-[1px] h-[50px] bg-black opacity-25"
       ></span>
-      <span class="text-sm lg:text-base ">دسته بندی ها</span>
+      <nuxt-link to="/" class="text-sm lg:text-base ">صفحه اصلی</nuxt-link>
       <span
         class="text-sm lg:text-base w-[1px] h-[50px] bg-black opacity-25"
       ></span>

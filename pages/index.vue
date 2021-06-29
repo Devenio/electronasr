@@ -42,45 +42,40 @@
         <h3 class="text-right lg:text-xl">جدیدترین محصولات</h3>
         <div class="mt-3 mb-5 h-[2px] w-[100px] bg-main"></div>
         <swiper class="swiper mt-5" :options="swiperOption" dir="rtl">
-          <product />
-          <product />
-          <product />
-          <product />
-          <product />
-          <product />
+          <product-slide />
+          <product-slide />
+          <product-slide />
+          <product-slide />
+          <product-slide />
+          <product-slide />
         </swiper>
         <h3 class="text-right mt-10 lg:text-xl">پرفروش ترین محصولات</h3>
         <div class="mt-3 mb-5 h-[2px] w-[100px] bg-main"></div>
         <swiper class="swiper mt-5" :options="swiperOption" dir="rtl">
-          <product />
-          <product />
-          <product />
-          <product />
-          <product />
-          <product />
+          <product-slide />
+          <product-slide />
+          <product-slide />
+          <product-slide />
+          <product-slide />
+          <product-slide />
         </swiper>
         <h3 class="text-right mt-10 lg:text-xl">لیست محصولات</h3>
         <div class="mt-3 mb-5 h-[2px] w-[100px] bg-main"></div>
         <swiper class="swiper mt-5" :options="swiperOption" dir="rtl">
           <swiper-slide
             class="py-2 mx-3 rounded-lg text-center px-5 shadow-xl border-black border-2  border-opacity-10"
+            v-for="category in list_category"
+            :key="category.id"
           >
-            لوازم خانگی
-          </swiper-slide>
-          <swiper-slide
-            class="py-2 mx-3 rounded-lg text-center px-5 shadow-xl border-black border-2  border-opacity-10"
-          >
-            لوازم برقی
-          </swiper-slide>
-          <swiper-slide
-            class="py-2 mx-3 rounded-lg text-center px-5 shadow-xl border-black border-2  border-opacity-10"
-          >
-            ابزارآلات صنعتی
-          </swiper-slide>
-          <swiper-slide
-            class="py-2 mx-3 rounded-lg text-center px-5 shadow-xl border-black border-2  border-opacity-10"
-          >
-            ابزار برقی منزل
+            <nuxt-link
+              class="no-wrap py-3"
+              :to="{
+                path: '/products',
+                query: { id: category.id, name: category.categoryName }
+              }"
+            >
+              {{ category.categoryName }}
+            </nuxt-link>
           </swiper-slide>
         </swiper>
       </div>
@@ -98,6 +93,8 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   components: {},
   data() {
@@ -126,7 +123,8 @@ export default {
         }
       }
     };
-  }
+  },
+  computed: mapState(["list_category"])
 };
 </script>
 

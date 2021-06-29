@@ -77,7 +77,7 @@
             </h1>
           </div>
           <nuxt-link
-            to="/about"
+            to="/"
             class="cursor-pointer py-3 px-5 text-white mt-5 bg-green-700 rounded-lg"
           >
             مشاهده محصولات
