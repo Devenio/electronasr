@@ -42,22 +42,20 @@
         <h3 class="text-right lg:text-xl">جدیدترین محصولات</h3>
         <div class="mt-3 mb-5 h-[2px] w-[100px] bg-main"></div>
         <swiper class="swiper mt-5" :options="swiperOption" dir="rtl">
-          <product-slide />
-          <product-slide />
-          <product-slide />
-          <product-slide />
-          <product-slide />
-          <product-slide />
+          <product-slide
+            v-for="service in list_services1"
+            :key="service.id"
+            :data="service"
+          />
         </swiper>
         <h3 class="text-right mt-10 lg:text-xl">پرفروش ترین محصولات</h3>
         <div class="mt-3 mb-5 h-[2px] w-[100px] bg-main"></div>
         <swiper class="swiper mt-5" :options="swiperOption" dir="rtl">
-          <product-slide />
-          <product-slide />
-          <product-slide />
-          <product-slide />
-          <product-slide />
-          <product-slide />
+          <product-slide
+            v-for="service in list_services2"
+            :key="service.id"
+            :data="service"
+          />
         </swiper>
         <h3 class="text-right mt-10 lg:text-xl">لیست محصولات</h3>
         <div class="mt-3 mb-5 h-[2px] w-[100px] bg-main"></div>
@@ -124,7 +122,15 @@ export default {
       }
     };
   },
-  computed: mapState(["list_category"])
+  computed: mapState(["list_category"]),
+  async asyncData({ $axios }) {
+    const list_services1 = await $axios.get(`/ListServices/1`);
+    const list_services2 = await $axios.get(`/ListServices/2`);
+    return {
+      list_services1: list_services1.data,
+      list_services2: list_services2.data
+    };
+  },
 };
 </script>
 

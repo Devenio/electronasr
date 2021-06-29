@@ -39,7 +39,6 @@ export default {
   async asyncData({ $axios, query }) {
     const categorId = query.id;
     const { data } = await $axios.get(`/ListServices/${categorId}`);
-    console.log(data);
     return {
       list_services: data
     };

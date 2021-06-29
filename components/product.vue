@@ -27,11 +27,10 @@ export default {
   methods: {
     makeImgUrl(val) {
       const url = 'http://45.147.77.128' + decodeURIComponent(val);
-      console.log(url);
       return url;
     },
     productDetail(id) {
-      // this.$router.push({ path: "/product-detail", query: { id }})
+      this.$router.push({ path: "/product-detail", query: { id }})
     }
   }
 };
