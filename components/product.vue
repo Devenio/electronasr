@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     makeImgUrl(val) {
-      const url = 'http://45.147.77.128' + decodeURIComponent(val);
+      const url = 'http://electronasr.ir' + decodeURIComponent(val);
       return url;
     },
     productDetail(id) {
