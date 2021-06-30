@@ -39,7 +39,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: "http://45.147.77.128/Service"
+    baseURL: "http://electronasr.ir/Service"
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
