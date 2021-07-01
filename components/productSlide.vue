@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     makeImgUrl(val) {
-      const url = "http://electronasr.ir" + decodeURIComponent(val);
+      const url = "http://api.electronasr.ir" + decodeURIComponent(val);
       return url;
     },
     productDetail(id) {
