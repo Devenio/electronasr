@@ -42,7 +42,7 @@
       </div>
 
       <a
-        href="http://45.147.77.128/Blog/"
+        href="http://api.electronasr.ir/Blog/"
         target="_blank"
         class="link text-sm font-medium text-center py-3 px-5 rounded-lg transition-colors duration-300 transform hover:text-main"
         >بلاگ</a

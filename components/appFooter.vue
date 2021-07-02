@@ -3,7 +3,7 @@
     <div
       class="w-full py-5 space-x-3 lg:space-x-5 flex items-center justify-center border-t-2 border-b-2 border-black border-opacity-10"
     >
-      <nuxt-link to="/blog" class="text-sm lg:text-base ">بلاگ</nuxt-link>
+      <a href="http://api.electronasr.ir/Blog" target="_blank" class="text-sm lg:text-base ">بلاگ</a>
       <span
         class="text-sm lg:text-base w-[1px] h-[50px] bg-black opacity-25"
       ></span>
