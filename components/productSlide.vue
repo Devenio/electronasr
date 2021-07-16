@@ -16,7 +16,7 @@
         href="tel:09127141877"
         class="text-sm mt-3 text-center hover:underline"
       >
-        برای سفارش خرید تماس بگیرید
+      برای سفارش خرید <strong class="text-main">تماس</strong> بگیرید
       </a>
     </div>
   </swiper-slide>

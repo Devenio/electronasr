@@ -10,8 +10,8 @@
     />
     <h3 class="text-lg mt-3 font-bold text-center">{{ data.name }}</h3>
     <h6 class="text-md mt-2 text-center">{{ data.price ? data.price : "قیمت مشخص نشده"}}</h6>
-    <a href="tel:09127141877" class="text-sm mt-3 text-center hover:underline">
-      برای سفارش خرید تماس بگیرید
+    <a href="tel:09127141877" class="text-sm mt-3 text-center mx-auto hover:underline">
+      برای سفارش خرید <strong class="text-main">تماس</strong> بگیرید
     </a>
   </div>
 </template>

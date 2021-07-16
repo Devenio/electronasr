@@ -1,35 +1,36 @@
 <template>
   <div dir="rtl">
-    <header class="header-background relative">
-      <img
+    <header class="header-background relative mt-32 sm:mt-10">
+      <!-- <img
         src="/img/group1.svg"
         alt=""
         class="absolute lg:w-auto w-[100px] -bottom-1 right-0"
-      />
-      <section class="flex items-center justify-center h-[500px]">
-        <div class="text-center">
+      /> -->
+      <section class="flex flex-col lg:flex-row-reverse items-center justify-center lg:justify-evenly h-[500px]">
+        <img src="/img/group3.svg" alt="" class="w-full sm:w-[400px] lg:w-[500px] mx-5 px-5" />
+        <div class="text-center lg:text-right mt-10 lg:mt-0">
           <transition name="slide-in" appear>
-            <h2 class="text-3xl font-bold text-white md:text-5xl">
+            <h2 class="text-3xl font-bold md:text-4xl">
               فروش محصولات برق و الکتریکی
               <span class="text-main">الکترونصر</span>
             </h2>
           </transition>
           <transition name="slide-in" appear>
-            <p class="mt-5 px-3 text-xl font-medium text-gray-300">
+            <p class="mt-5 px-3 text-xl font-medium text-gray-500">
               محصولات برقی مورد نیازتون رو میتونید از الکترونصر تهیه کنید.
             </p>
           </transition>
 
-          <div class="flex flex-wrap items-center justify-center mt-8">
+          <div class="flex flex-wrap items-center justify-center lg:justify-start mt-8">
             <nuxt-link
               to="/about"
-              class="m-3 cursor-pointer py-3 px-5 bg-green-700 text-white rounded-lg"
+              class="m-3 cursor-pointer text-white py-3 px-5 bg-green-700 rounded-lg"
             >
               درباره ما
             </nuxt-link>
             <nuxt-link
               to="/about"
-              class="m-3 cursor-pointer py-3 px-5 text-green-700 bg-white rounded-lg"
+              class="m-3 cursor-pointer py-3 px-5 text-green-700 bg-white rounded-lg border-2 border-green-700"
             >
               مشاهده محصولات
             </nuxt-link>
@@ -37,7 +38,7 @@
         </div>
       </section>
     </header>
-    <section class="mt-10">
+    <section class="mt-16 lg:mt-10">
       <div class="container mx-auto px-3 lg:p-0">
         <h3 class="text-right lg:text-xl">جدیدترین محصولات</h3>
         <div class="mt-3 mb-5 h-[2px] w-[100px] bg-main"></div>
@@ -130,14 +131,14 @@ export default {
       list_services1: list_services1.data,
       list_services2: list_services2.data
     };
-  },
+  }
 };
 </script>
 
 <style scoped>
 .header-background {
-  background-image: linear-gradient(#00000090, #00000090), url("/img/bg.jpg");
+  /* background-image: linear-gradient(#00000090, #00000090), url("/img/bg.jpg");
   background-size: cover;
-  background-position: top;
+  background-position: top; */
 }
 </style>
